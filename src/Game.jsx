@@ -10,7 +10,7 @@ function Game() {
 
   const [game, setGame] = useState({
     start: true,
-    bombs: 5,
+    bombs: 10,
     end: false,
 
   });
@@ -38,6 +38,7 @@ function Game() {
             gameCopy.end = true;
 
             setGame(gameCopy);
+            console.log('game over')
         
       }});
 
@@ -47,6 +48,8 @@ function Game() {
   const startGame = () => {
 
     let bombs = generateBombs(game.bombs);
+    console.log(bombs);
+    attachBombs(bombs);
   }
 
   const generateBombs = (bombNumber) => {
@@ -65,7 +68,6 @@ function Game() {
 
       if (duplicate !== true) { bombs.push(random); ++countBomb; }
     }
-    console.log(bombs);
 
     // Sort the bomb array ascending.
     bombs.sort((a, b) => { return a - b});
@@ -85,13 +87,28 @@ function Game() {
       });
     });
 
-    console.log(squares);
-
     return bombs;
   }
 
-  const attachBombs = () => {
+  const attachBombs = (bombArray) => {
 
+    // Clone the state
+    let squareClone = [...squares];
+    console.log(squareClone);
+
+    // Iterate bomb array generated from generateBombs()
+    bombArray.forEach(value => {
+      
+      // Iterate each square from state and if has no bomb add a number to show how many boms are around him.
+      squareClone.forEach(square => {
+
+        if(square.id < 11 && square.value != true) {
+          console.log(square.id, square.value);
+        }
+        
+      });
+
+    });
   }
 
   return (
