@@ -19,6 +19,7 @@ const Start = () => {
         
         let result = PATTERN.test(bombAmount);
         console.log(result);
+
     }
 
 
