@@ -7,6 +7,7 @@ const Start = () => {
 
     const PATTERN = /^\d+$/;
     const [bombAmount, setBombAmount] = useState('');
+    const [error, setError] = useState({ error: 'Please insert a number'});
 
     const handleInput = e => {
        
@@ -25,6 +26,7 @@ const Start = () => {
         <div className='start-section'>
 
             <input  className='start-input'  maxLength={2} onChange={e => handleInput(e.target)}/>
+            <strong className='error'>{error.error}</strong>
             <button className='start-btn' onClick={() => validateBombsAmount()} >Start</button>
 
         </div>

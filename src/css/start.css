@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono&display=swap');
 
 .start-section {
   width: 100%;
@@ -8,6 +9,7 @@
   grid-template-rows:    repeat(5, 1fr);
   background-color: rgb(252, 245, 239);
 }
+
 
 .start-btn,
 .start-input {
@@ -26,7 +28,7 @@
 
 .start-input {
   justify-self: center;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .start-input {
@@ -53,4 +55,17 @@
 .start-btn:hover {
   color: #764e2d;
   transition: 0.2s;
+}
+
+.error {
+  display: grid;
+  grid-area: 3/2/4/3;
+  justify-self: center;
+  align-self: center;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  color: rgb(255, 43, 50);
+  font-family: 'Roboto Mono', monospace;
 }
