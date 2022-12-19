@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Error from '../components/Error';
+import Minesweeper from '../components/Minesweeper';
 import Start from '../components/Start';
 
 const Router = () => {
@@ -14,7 +15,7 @@ const Router = () => {
         },
         {
             path: '/game-start',
-            element: <div>Start game</div>,
+            element: <Minesweeper />,
         },
     ])
 
