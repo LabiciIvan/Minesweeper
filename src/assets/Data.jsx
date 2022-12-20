@@ -1,4 +1,5 @@
 export const squaresData = [
+    {id:0,  bomb: false, around:''},
     {id:1,  bomb: false, around:''},
     {id:2,  bomb: false, around:''},
     {id:3,  bomb: false, around:''},
@@ -98,6 +99,5 @@ export const squaresData = [
     {id:97, bomb: false, around:''},
     {id:98, bomb: false, around:''},
     {id:99, bomb: false, around:''},
-    {id:100, bomb:false, around:''},
 ];
 
