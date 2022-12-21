@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono&display=swap');
+/* Added google fonts for some nice fonts. */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right top, #d18652, #d08851, #ce8a4f, #cd8d4e, #cb8f4d, #cc9351, #ce9754, #cf9b58, #d4a261, #daa869, #dfaf72, #e4b67b);
+}
+
+#gameBoard{
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  border: 5px solid #7f5538;
+  border-radius: 5px;
+  background-color: #7f5538;
+  justify-content: center;
+  align-items: center;
+}
+
+.noBomb,
+.bomb,
+.checked {
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+}
+
+.noBomb,
+.bomb {
+  background-color: #e79c67;
+  border: 5px solid;
+  border-color: #d78e5b #bc7c4f #bc7c4f #f7af7d;
+  cursor: pointer;
+  }
+
+.checked {
+  background-color: #c8a48a;
+  border: 2px solid;
+  border-color: #7f5538;
+  font-weight: bold;
+}
+
+.secondBoard {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  opacity: 0.6;
+  position: absolute;
+  background-color:grey;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondBoard:hover {
+  background-color: black;
+}
+
+.playAgain {
+  display: flex;
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  background-color: rgb(245, 241, 241);
+  border: 2px solid black;
+  justify-content: center;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+#statusGame {
+  display: flex;
+  flex-direction: row;
+  width: 510px;
+  height: 50px;
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
+  justify-content: center;
+}
+
+[one] {
+  color: blue;
+}
+
+[two] {
+ color: green;
+}
+
+[three] {
+  color: rgb(205, 40, 11);
+ }
+
+ [four] {
+  color: purple;
+ }
+
+ 
