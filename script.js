@@ -217,6 +217,7 @@ function coverGameBoard(message) {
   playAgain.innerHTML = message;
   playAgain.onclick = restartGame
   secondBoard.setAttribute('class','secondBoard');
+  
   gameBoard.appendChild(secondBoard);
 
   gameBoard.appendChild(playAgain);
