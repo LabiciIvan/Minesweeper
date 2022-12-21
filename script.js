@@ -109,7 +109,8 @@ function addNumber() { // add numbers to squares without bomb to see how many bo
   }
 }
 
-function detonateBomb() { //showing all squares with bomb GAME OVER
+function detonateBomb() { 
+  //showing all squares with bomb GAME OVER in clicked.
   for (let i = 0; i < arrayBombs.length; ++i) {
     let elementBomb = arrayBombs[i];
     document.getElementById(elementBomb).innerHTML ="💣";
